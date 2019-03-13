@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/stylesheet" href="asset/style/style.css">
+
+    <title>Crystal Collector</title>
+  </head>
+  <body>
+    <h1 class = "text-center">Crystal Collector</h1>
+    <main class="container">
+        <!--Rule section-->
+        <div class ="row d-flex justify-content-center mb-2">
+                <div class = "card bg-info border rounded col-md-8 text-light" id="game-rule">
+                        <h2 class = "card-title h4">The rule</h2>
+                        <ol class = "card-body">
+                            <li> You will be give a random number at the start of the game.</li>
+                            <li> Your goals is to match that number using the value of the four crystals. You will fail if your score go higher.</li>
+                            <li> Each crystals have a hidden value. You will have to click on them to reveal their value.</li>
+                            <li> The values will reset themself each round.</li>
+                        </ol>
+                    </div>
+        </div>
+        <!---Score section-->
+        <div class = "row justify-content-center my-1">
+            <div class = "col-md-8 d-flex">
+                <div class = "card rounded-left bg-primary col-md-5 px-0">
+                    <h3 class = "card-title h4 border-bottom border-light  text-center mx-0"> Target</h3>
+                    <div class = "card-body" id="target-num"></div>
+                </div>
+                <div class ="col-md-2" id="result"></div>
+                <div class = "card rounded-right bg-light col-md-5 px-0">
+                    <h3 class = "card-title h4 border-bottom border-primary  text-center mx-0 "> Score</h3>
+                    <div class = "card-body" id="score-num"></div>
+                </div>
+            </div>
+        </div>
+        <!--Crystal section-->
+        <div class = "row justify-content-center my-1 ">
+            <div class = "col-md-8 border border-black" style="height: 5em">
+                <div class = "border border-black col-md-2 crystal" id="crystal-1"></div>
+                <div class = "border border-black csol-md-2 crystal" id="crystal-2"></div>
+                <div class = "border border-black col-md-2 crystal" id="crystal-3"></div>
+                <div class = "border border-black col-md-2 crystal" id="crystal-4"></div>
+            </div>
+        </div>
+        <!--Console/comment section-->
+        <div class = "row mt-2 justify-content-center">
+            <div class = "col-md-8 d-flex justify-content-between">
+                <div class = "card col-md-5 px-0"> 
+                    <div class = "bg-success card-title text-light text-center">Wins</div>
+                    <div class = "bg-light card-body" id="#win-number">0</div>
+                </div>
+                <div class = "card col-md-5 px-0">
+                    <div class = "bg-danger card-title text-light text-center">Losts</div>
+                    <div class = "bg-light card-body" id="#lose-number">0</div>
+                </div>
+            </div>
+        </div>
+        <div class = "row justify-content-center">
+            <div class = "col-md-8 border border-dark" id="#message-box" style="height:10em">
+
+            </div>
+        </div>
+
+    </main>
+
+
+    <!-- jQuery first then game script -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="asset/javascript/game.js"></script>
+  </body>
+</html>
