@@ -74,7 +74,7 @@ function checkForWin() {
         $("#lose-number").text(loses);
     }
     if(state === 1) {
-        $("#reset").hidden = false;
+        $("#reset").removeClass("hidden");
     }
 }
 
