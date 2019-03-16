@@ -8,7 +8,7 @@ var crystal1,crystal2,crystal3,crystal4
 var crystalsMap;
 var targetScore = 0;
 var playerScore = 0;
-var state = 0;
+var isFinished = false;
 class crystal {
     constructor(str) {
         this.id = str;
@@ -58,30 +58,49 @@ function updateScore(crystalDOM) {
 function displayCrystalValue(crystalDOM) {
     var tempID = crystalDOM.id;
     if(!crystalsMap[tempID].valueDisplay) {
-        $(crystalDOM).append(crystalsMap[tempID].value);
+        $(crystalDOM).append('<span class="crystal-value">'+crystalsMap[tempID].value+'</span>');
         crystalsMap[tempID].valueDisplay = true;
     }
 }
 
 function checkForWin() {
     if(playerScore === targetScore) {//win condition
-        state = 1;
+        isFinished = true;
         wins++;
         $("#win-number").text(wins);
+        $("#result").html('<i class="far fa-smile-beam text-success text-center fa-4x"></i>');
+        $("#reset").removeClass("hidden");
     } else if(playerScore > targetScore) {
-        state = 1;
+        isFinished = true;
         loses++;
         $("#lose-number").text(loses);
-    }
-    if(state === 1) {
+        $("#result").html('<i class="far fa-tired text-danger text-center fa-4x"></i>');
         $("#reset").removeClass("hidden");
     }
 }
 
 // Assign the value of crystal to the crystal HTML Element 
-newGame();
+
+
+$(document).ready(function() {
+    newGame();
+})
+
+$("#reset").on("click", function() {
+    if(isFinished) {
+        targetScore = 0
+        playerScore = 0;
+        $(".crystal-value").remove();
+        $("#result").empty();
+        $("#target-num").empty();
+        $("#score-num").empty();
+        $("#reset").addClass("hidden");
+        isFinished = false;
+        newGame();
+    }
+})
+
 $(".crystal").on("click", function() {
-    var isFinished = state === 1;
     if (!isFinished) { 
         displayCrystalValue(this); 
         updateScore(this);

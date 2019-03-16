@@ -2,6 +2,37 @@
     border-radius:0px;
 }
 
+.score-display {
+    padding:0px;
+    font-size:2.5rem;
+}
+
+h1 {
+    font-size:3rem;
+    font-weight: 1000;
+    padding-bottom:0.25rem;
+}
+
 button.hidden {
     visibility:hidden;
+}
+
+.bg-primary {
+    background-color: teal!important;
+}
+
+.bg-info {
+    background-color: greenyellow!important;
+}
+
+.wraper {
+    background-color:purple;
+}
+
+html,body {
+    background-image: url("../images/Gem-Background.png");
+}
+
+.row {
+    padding:0!important;
 }

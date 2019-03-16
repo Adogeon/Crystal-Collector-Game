@@ -13,11 +13,15 @@
     <title>Crystal Collector</title>
   </head>
   <body>
-    <h1 class = "text-center">Crystal Collector</h1>
+    <div class="row d-flex justify-content-center">
+        <div class = "col-md-4">
+            <h1 class="text-center bg-warning" style="color:red">Crystal Collector</h1>
+        </div>
+    </div>
     <main class="container">
         <!--Rule section-->
-        <div class ="row d-flex justify-content-center mb-2">
-                <div class = "card bg-info border rounded col-md-8 text-light" id="game-rule">
+        <div class ="row d-flex justify-content-center pb-2">
+                <div class = "card col-md-8 bg-info border rounded text-dark" id="game-rule">
                         <h2 class = "card-title h4">The rule</h2>
                         <ol class = "card-body">
                             <li> You will be give a random number at the start of the game.</li>
@@ -28,50 +32,47 @@
                     </div>
         </div>
         <!---Score section-->
-        <div class = "row justify-content-center my-1">
-            <div class = "col-md-8 d-flex">
-                <div class = "card rounded-left bg-primary col-md-5 px-0">
+        <div class = "row justify-content-center ">
+            <div class = "d-flex col-md-8 py-1 wraper">
+                <div class = "card col-md-5 rounded-left bg-primary text-light px-0">
                     <h3 class = "card-title h4 border-bottom border-light  text-center mx-0"> Target</h3>
-                    <div class = "card-body" id="target-num"></div>
+                    <div class = "card-body score-display" id="target-num"></div>
                 </div>
-                <div class ="col-md-2">
-                    <div id = "result"></div>
-                    <button class = "button button-warning hidden"id="reset" >Reset</button>
+                <div class ="col-md-2 ">
+                    <div class = "text-center"id = "result"></div>
+                    <div class = "row justify-content-center">
+                        <button class = "button btn-warning  center-block hidden"id="reset" >Reset</button>
+                    </div>
                 </div>
                 <div class = "card rounded-right bg-light col-md-5 px-0">
                     <h3 class = "card-title h4 border-bottom border-primary  text-center mx-0 "> Score</h3>
-                    <div class = "card-body" id="score-num"></div>
+                    <div class = "card-body score-display" id="score-num"></div>
                 </div>
             </div>
         </div>
         <!--Crystal section-->
-        <div class = "row justify-content-center my-1 ">
-            <div class = "col-md-8 d-flex" style="height: 5em">
-                <div class = " button col-md-3 text-center crystal" id="crystal-1"><i class="fas fa-gem fa-5x" style="color:green"></i></div>
-                <div class = " button col-md-3 text-center crystal" id="crystal-2"><i class="fas fa-gem fa-5x" style="color:red"></i></div>
-                <div class = " button col-md-3 text-center crystal" id="crystal-3"><i class="fas fa-gem fa-5x" style="color:blue"></i></div>
-                <div class = "button col-md-3 text-center crystal" id="crystal-4" style = "color:blueviolet"><i class="fas fa-gem fa-5x"></i></div>
+        <div class = "row justify-content-center">
+            <div class = "d-flex col-md-8 py-3 wraper" style="height:7em;color:yellow">
+                <div class = " button col-md-3 text-center crystal" id="crystal-1"><i class="fas fa-gem fa-5x bg-white p-1" style="color:green"></i></div>
+                <div class = " button col-md-3 text-center crystal" id="crystal-2"><i class="fas fa-gem fa-5x bg-white p-1" style="color:red"></i></div>
+                <div class = " button col-md-3 text-center crystal" id="crystal-3"><i class="fas fa-gem fa-5x bg-white p-1" style="color:blue"></i></div>
+                <div class = "button col-md-3 text-center crystal" id="crystal-4" ><i class="fas fa-gem fa-5x bg-white p-1" style = "color:blueviolet"></i></div>
             </div>
         </div>
         <!--Console/comment section-->
-        <div class = "row mt-2 justify-content-center">
-            <div class = "col-md-8 d-flex justify-content-between">
+        <div class = "row  justify-content-center">
+            <div class = "d-flex col-md-8 justify-content-between py-2 wraper">
                 <div class = "card col-md-5 px-0"> 
                     <div class = "bg-success card-title text-light text-center">Wins</div>
-                    <div class = "bg-light card-body" id="win-number">0</div>
+                    <div class = "bg-light card-body score-display" id="win-number">0</div>
                 </div>
                 <div class = "card col-md-5 px-0">
                     <div class = "bg-danger card-title text-light text-center">Loses</div>
-                    <div class = "bg-light card-body" id="lose-number">0</div>
+                    <div class = "bg-light card-body score-display" id="lose-number">0</div>
                 </div>
             </div>
         </div>
-        <!--
-        <div class = "row justify-content-center">
-            <div class = "col-md-8 border border-dark" id="#message-box" style="height:10em">
-
-            </div>
-        </div>-->
+       
 
     </main>
 
